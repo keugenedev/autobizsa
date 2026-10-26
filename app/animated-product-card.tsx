@@ -3,13 +3,12 @@
 import { motion, useReducedMotion } from "framer-motion";
 
 type AnimatedProductCardProps = {
-  number: string;
   title: string;
   text: string;
   index: number;
 };
 
-export default function AnimatedProductCard({ number, title, text, index }: AnimatedProductCardProps) {
+export default function AnimatedProductCard({ title, text, index }: AnimatedProductCardProps) {
   const reduceMotion = useReducedMotion();
 
   return (
@@ -23,7 +22,6 @@ export default function AnimatedProductCard({ number, title, text, index }: Anim
         ease: [0.16, 1, 0.3, 1],
       }}
     >
-      <span>{number}</span>
       <h3>{title}</h3>
       <p>{text}</p>
     </motion.article>

@@ -1,0 +1,9 @@
+/* Équilibre les cartes et les heroes après retrait des index décoratifs. */
+.productsHeroInner, .addressesHeroInner { display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end; }
+.contactHeroInner { grid-template-columns: 1fr; }
+.productsCategoryGrid h3 { margin-top: 24px; }
+.addressesCards svg, .contactLocationCard svg { margin-top: 0; }
+
+@media (max-width: 720px) {
+  .productsHeroInner, .addressesHeroInner { display: flex; }
+}

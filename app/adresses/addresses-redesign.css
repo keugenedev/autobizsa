@@ -1,0 +1,122 @@
+/* Répertoire de points de vente : une composition éditoriale, sans cartes répétitives. */
+.addressesList {
+  display: block;
+  width: min(1120px, calc(100% - 60px));
+  padding: 112px 0 118px;
+}
+
+.addressesListHeading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 48px;
+  max-width: 820px;
+}
+
+.addressesListHeading::after {
+  max-width: 210px;
+  color: #687175;
+  font-size: 13px;
+  line-height: 1.7;
+  content: "Retrouvez nos équipes et nos produits près de chez vous.";
+}
+
+.addressesCards {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0;
+  margin-top: 62px;
+  border-top: 1px solid #cbd0cc;
+  border-left: 1px solid #cbd0cc;
+}
+
+.addressesCards article {
+  min-height: 235px;
+  padding: 30px;
+  border: 0;
+  border-right: 1px solid #cbd0cc;
+  border-bottom: 1px solid #cbd0cc;
+  background: transparent;
+  box-shadow: none;
+}
+
+.addressesCards article:first-child {
+  grid-column: span 2;
+  min-height: 300px;
+  padding: 42px;
+  border-color: #101820;
+  background: #101820;
+  color: #fff;
+}
+
+.addressesCards article:nth-child(2),
+.addressesCards article:nth-child(5) { border-right: 0; }
+
+.addressesCards svg {
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  color: #e32634;
+}
+
+.addressesCards h3 {
+  margin: 54px 0 8px;
+  font-size: 20px;
+  letter-spacing: -.7px;
+}
+
+.addressesCards article:first-child h3 {
+  margin-top: 68px;
+  font-size: clamp(31px, 3vw, 43px);
+  letter-spacing: -2px;
+}
+
+.addressesCards .addressBrandLogo {
+  display: block;
+  width: clamp(190px, 22vw, 240px);
+  max-width: 110%;
+  height: auto;
+  object-fit: contain;
+  object-position: left center;
+  transform: translateX(-10%);
+}
+
+.addressesCards h3.addressBrandHeading {
+  margin-top: -6px;
+  margin-bottom: -4px;
+  line-height: 1;
+}
+
+.addressesCards p { font-size: 13px; }
+.addressesCards article:first-child p { color: #c8d0d2; }
+.addressesCards a { margin-top: 25px; color: #e32634; }
+.addressesCards .addressContactLink { margin-top: 9px; }
+.addressesCards article:first-child a { color: #fff; }
+
+@media (max-width: 960px) and (min-width: 721px) {
+  .addressesList { width: min(100% - 48px, 820px); }
+  .addressesCards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .addressesCards article:first-child { grid-column: span 2; }
+  .addressesCards article:nth-child(2),
+  .addressesCards article:nth-child(5) { border-right: 1px solid #cbd0cc; }
+  .addressesCards article:nth-child(3),
+  .addressesCards article:nth-child(5) { border-right: 0; }
+  .addressesCards .addressBrandLogo { width: clamp(180px, 28vw, 220px); }
+}
+
+@media (max-width: 720px) {
+  .addressesList { width: min(100% - 40px, 600px); padding: 70px 0; }
+  .addressesListHeading { display: block; }
+  .addressesListHeading::after { display: block; margin-top: 22px; }
+  .addressesCards { grid-template-columns: 1fr; margin-top: 40px; }
+  .addressesCards article,
+  .addressesCards article:first-child {
+    grid-column: auto;
+    min-height: auto;
+    padding: 28px;
+    border-right: 0;
+  }
+  .addressesCards h3,
+  .addressesCards article:first-child h3 { margin-top: 34px; font-size: 24px; letter-spacing: -1px; }
+  .addressesCards h3.addressBrandHeading { margin-top: -6px; }
+  .addressesCards .addressBrandLogo { width: min(65vw, 220px); }
+}

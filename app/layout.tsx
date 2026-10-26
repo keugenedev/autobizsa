@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import "./hero-fix.css";
+import "./navbar-fix.css";
+import "./no-counts.css";
 
 export const metadata: Metadata = {
   title: "Autobiz SA | Produits automobiles",

@@ -122,9 +122,9 @@
 @media (max-width:720px){.logoGrid,.footerLogos{grid-template-columns:repeat(3,minmax(0,1fr))}}
 
 /* Première section monochrome : uniquement le rouge Autobiz. */
-.hero{display:block;min-height:584px;background:#e32634}
-.hero .heroArt{width:100%;min-height:584px;background:#e32634;clip-path:none}
-@media (max-width:720px){.hero{min-height:420px}.hero .heroArt{min-height:420px}}
+.hero{display:block;min-height:calc(100svh - 86px);background:#e32634}
+.hero .heroArt{width:100%;min-height:calc(100svh - 86px);background:#e32634;clip-path:none}
+@media (max-width:720px){.hero{min-height:calc(100svh - 72px)}.hero .heroArt{min-height:calc(100svh - 72px)}}
 
 /* Deux traces additionnelles, parallèles aux traits existants. */
 .hero .heroArt:before{box-shadow:0 -150px 0 rgba(255,255,255,.42)}
