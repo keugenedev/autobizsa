@@ -1,69 +1,56 @@
-import Image from "next/image";
+const products = [
+  ["01", "Lubrifiants", "Shell · Hyundai · Cem2"],
+  ["02", "Peinture auto", "Automotive Art"],
+  ["03", "Moto", "Toro · Titan"],
+];
+
+const locations = [
+  ["01", "Autobiz SA", "Delmas 52", "Port-au-Prince, Haïti"],
+  ["02", "Alomoto", "Pétion-Ville", "Haïti"],
+  ["03", "Alomoto", "Delmas 60", "Haïti"],
+  ["04", "Alomoto", "Cap-Haïtien", "Haïti"],
+];
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main>
+      <header className="siteHeader">
+        <a href="#accueil" aria-label="Autobiz SA, accueil"><img className="brandLogo" src="/autobiz.png" alt="Autobiz SA" /></a>
+        <nav aria-label="Navigation principale"><a href="#produits">Produits</a><a href="#marques">Marques</a><a href="#adresses">Nos adresses</a></nav>
+        <a className="phoneTop" href="tel:+50934011919">+509 3401 1919</a>
+      </header>
+
+      <section id="accueil" className="hero">
+        <div className="heroCopy">
+          <p className="eyebrow">Depuis Haïti, pour votre véhicule</p>
+          <h1>Votre partenaire automobile, <span>tout simplement.</span></h1>
+          <p className="lead">Autobiz SA vous accompagne avec une sélection fiable de lubrifiants, peintures, pneus et accessoires automobiles.</p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+        <div className="heroArt" aria-label="La qualité au service de la route">
+          <p>LA QUALITÉ<br /><strong>AU SERVICE</strong><br />DE LA ROUTE</p><div className="wheel" aria-hidden="true" />
         </div>
-      </main>
-    </div>
+      </section>
+
+      <section id="produits" className="section products">
+        <div><p className="eyebrow">Nos références</p><h2>Des produits, bien classés.</h2></div>
+        <div className="productGrid">{products.map(([number, title, text]) => <article key={number}><span>{number}</span><h3>{title}</h3><p>{text}</p></article>)}</div>
+      </section>
+
+      <section id="marques" className="section brands">
+        <div><p className="eyebrow">Des marques reconnues</p><h2>La confiance commence par le bon choix.</h2></div>
+        <div className="logoGrid">
+          <div><img src="/shell.png" alt="Shell" /></div><div className="xteerLogo" aria-label="XTeer Hyundai"><span>XTEER</span><small>HYUNDAI</small></div><div><img src="/art.png" alt="Automotive Art" /></div>
+          <div><img src="/toro.png" alt="Toro" /></div><div><img src="/titan.png" alt="Titan" /></div><div><img src="/alomoto.png" alt="Alomoto" /></div>
+        </div>
+        <p className="brandNote">Aussi disponibles : <b>Alomoto TS</b>, <b>Alomoto PU</b>, <b>Alomoto DL60</b>, <b>Alomoto CH</b> et <b>Alomoto Turjetrau</b>.</p>
+      </section>
+
+      <section id="adresses" className="section locations">
+        <div><p className="eyebrow pale">Retrouvez-nous</p><h2>Plus près de votre route.</h2></div>
+        <div className="locationGrid">{locations.map(([number, title, address, city]) => <article key={number}><span>{number}</span><h3>{title}</h3><p>{address}<br />{city}</p></article>)}</div>
+      </section>
+
+      <footer><div><img className="brandLogo" src="/autobiz.png" alt="Autobiz SA" /><p>Produits automobiles en Haïti.</p></div><div className="contact"><a href="tel:+50934011919">+509 3401 1919</a><a href="tel:+50934021919">+509 3402 1919</a><a href="mailto:info@autobizsa.com">info@autobizsa.com</a></div><p className="copyright">© Autobiz SA</p></footer>
+    </main>
   );
 }
