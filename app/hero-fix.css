@@ -1,5 +1,8 @@
 .hero{grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr)}
 .heroCopy{width:100%;min-width:0;max-width:none;margin-left:0;padding:104px 48px 90px max(30px,calc((100vw - 1140px)/2))}
+.heroCopy{position:relative}.heroCopy:before{position:absolute;top:106px;left:max(14px,calc((100vw - 1172px)/2));width:3px;height:44px;background:var(--red);content:""}
+.heroReferences{display:flex;gap:18px;margin-top:36px;color:#fff;font-size:10px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase}.heroReferences span+span{position:relative}.heroReferences span+span:before{position:absolute;top:50%;left:-10px;width:3px;height:3px;border-radius:50%;background:var(--red);content:""}
+.heroArt{display:block;padding:64px 10%;font-size:inherit}.heroTag{margin:0;color:#fff;font-size:10px;font-weight:700;letter-spacing:1.8px}.heroStatement{margin:92px 0 0;font-size:clamp(31px,4vw,54px);font-weight:400;letter-spacing:-2px;line-height:.97}.heroStatement strong{font-weight:800}
 .productGrid{grid-template-columns:repeat(3,minmax(0,1fr))}
 .productGrid article:last-child{border-right:0}
 .logoGrid img{filter:none}
@@ -7,6 +10,7 @@
 
 @media (max-width:720px){
   .heroCopy{padding:70px 26px}
+  .heroCopy:before{top:70px;left:12px;height:34px}.heroReferences{gap:13px;margin-top:27px;font-size:9px}.heroArt{padding:38px 26px}.heroStatement{margin-top:54px}
   .productGrid{grid-template-columns:1fr 1fr}
 }
 
@@ -55,6 +59,7 @@
 .addressLine{display:flex;align-items:flex-start;gap:7px}
 .socialIcon svg{width:15px;height:15px}.socialIcon:not([aria-label="Email"]) svg{fill:currentColor;stroke:none}.socialIcon[aria-label="Email"] svg{fill:none;stroke:currentColor;stroke-width:2}
 
+
 @media (max-width:720px){
   .footerInner{padding:44px 26px 22px}
   .footerTop{grid-template-columns:1fr 1fr;gap:32px}
@@ -63,3 +68,68 @@
   .footerBottom{flex-direction:column;gap:14px}
   .addressList{grid-template-columns:1fr}
 }
+
+/* Première section — nouvelle composition bicolore. */
+.hero{min-height:640px;grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr)}
+.heroCopy{padding-top:78px;padding-bottom:64px}.heroCopy:before{display:none}
+.heroIndex{display:flex;align-items:center;gap:12px;margin-bottom:50px;color:#acb6b9;font-size:10px;font-weight:700;letter-spacing:1.8px;text-transform:uppercase}.heroIndex span:first-child{display:grid;place-items:center;width:28px;height:28px;background:var(--red);color:#fff;letter-spacing:0}
+.heroCopy .eyebrow{margin-bottom:18px}.hero h1{max-width:690px;font-size:clamp(48px,5.5vw,76px);line-height:1.01}.lead{max-width:500px;margin:30px 0 0;color:#cbd2d4}
+.heroReferences{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:56px}.heroReferences div{padding-top:12px;border-top:1px solid #3a464c}.heroReferences b,.heroReferences span{display:block}.heroReferences b{color:#fff;font-size:11px;letter-spacing:.3px}.heroReferences span{margin-top:4px;color:#aeb9bd;font-size:10px;font-weight:500;letter-spacing:0;text-transform:none}.heroReferences span+span:before{display:none}
+.heroArt{padding:54px 11%;background:linear-gradient(125deg,#e32634 0%,#e32634 62%,#bd1b27 62%)}.heroArt:before{top:24%;left:-100px;width:520px}.heroArt:after{top:65%;left:-130px;width:560px}.heroTag{position:relative;margin:0;color:#fff;font-size:10px;font-weight:700;letter-spacing:1.8px;text-align:right}.heroBadge{position:relative;display:inline-block;margin-top:68px;padding:9px 12px;border:1px solid rgba(255,255,255,.72);color:#fff;font-size:10px;font-weight:700;letter-spacing:1.2px;line-height:1.35}.heroStatement{position:relative;margin-top:36px;font-size:clamp(31px,3.7vw,52px);line-height:.98}.heroStatement strong{font-weight:800}.heroRing{position:absolute;right:-45px;bottom:-50px;width:222px;height:222px;border:29px solid #111c22;border-radius:50%;box-shadow:inset 0 0 0 7px #667075}.heroRing:after{position:absolute;inset:38px;border:12px solid #fff;border-radius:50%;content:""}.heroRing i{position:absolute;z-index:1;top:53px;left:85px;width:16px;height:55px;background:#fff;transform-origin:50% 58px}.heroRing i:nth-child(2){transform:rotate(120deg)}.heroRing i:nth-child(3){transform:rotate(240deg)}
+
+@media (max-width:720px){.heroIndex{margin-bottom:32px}.hero h1{font-size:clamp(42px,12vw,58px)}.heroReferences{gap:10px;margin-top:34px}.heroReferences b{font-size:10px}.heroReferences span{font-size:9px}.heroArt{min-height:340px;padding:38px 26px}.heroBadge{margin-top:45px}.heroStatement{margin-top:28px}.heroRing{width:165px;height:165px;right:-30px;bottom:-38px;border-width:21px}.heroRing:after{inset:29px;border-width:9px}.heroRing i{top:38px;left:62px;width:12px;height:42px;transform-origin:50% 44px}}
+
+/* Panneau rouge volontairement simple. */
+.heroArt{display:grid;place-items:center;padding:40px}.heroStatement{margin:0;text-align:center;font-size:clamp(34px,4vw,58px)}
+@media (max-width:720px){.heroArt{padding:28px}.heroStatement{margin:0}}
+
+/* Version épurée : un seul message au centre de la bannière bicolore. */
+.hero{display:block;min-height:560px;background:linear-gradient(90deg,#101820 0%,#101820 50%,#df1c2b 50%,#bc1926 100%)}
+.hero .heroArt{min-height:560px;background:transparent}.hero .heroArt:before,.hero .heroArt:after{display:none}.hero .heroStatement{padding:24px;color:#fff;text-shadow:none}
+@media (max-width:720px){.hero,.hero .heroArt{min-height:420px}.hero{background:linear-gradient(125deg,#101820 0%,#101820 50%,#df1c2b 50%,#bc1926 100%)}}
+
+/* Retour du design de bannière : contenu à gauche, message au centre du panneau rouge. */
+.hero{display:grid;min-height:584px;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);background:#101820}
+.heroCopy{display:block;padding:104px 48px 90px max(30px,calc((100vw - 1140px)/2))}.heroCopy .eyebrow{margin-bottom:14px}.heroCopy .lead{margin:27px 0 0}
+.hero .heroArt{min-height:584px;padding:40px;background:linear-gradient(125deg,#df1c2b 0%,#df1c2b 57%,#bf1724 57%)}.hero .heroArt:before,.hero .heroArt:after{display:block}.hero .heroArt:before{top:35%;left:-80px;width:520px}.hero .heroArt:after{top:60%;left:-80px;width:520px}.hero .heroStatement{padding:0;text-align:center;color:#fff}
+@media (max-width:720px){.hero{display:grid;grid-template-columns:1fr;background:#101820}.hero .heroArt{min-height:260px}.heroCopy{padding:70px 26px}.hero .heroStatement{text-align:center}}
+
+/* Bannière finale : deux couleurs, un seul message. */
+.hero{display:grid;min-height:584px;grid-template-columns:60% 40%;background:#101820}
+.hero .heroArt{display:grid;place-items:center;min-height:584px;padding:40px;background:#e32634}
+.hero .heroArt:before,.hero .heroArt:after{display:none}
+.hero .heroStatement{margin:0;padding:0;color:#fff;font-size:clamp(34px,4vw,58px);font-weight:400;line-height:.98;text-align:center}
+.hero .heroStatement strong{font-weight:800}
+.hero .heroArt{position:relative;overflow:hidden}
+.hero .heroStatement{position:relative;z-index:1}
+.hero .heroArt:before,.hero .heroArt:after{position:absolute;display:block;width:130%;height:1px;background:rgba(255,255,255,.58);content:"";transform:rotate(-29deg);transform-origin:left center}
+.hero .heroArt:before{top:38%;left:-24%}
+.hero .heroArt:after{top:64%;left:-24%}
+@media (max-width:720px){.hero{grid-template-columns:1fr;min-height:420px}.hero .heroArt{min-height:420px;padding:28px}.hero .heroStatement{font-size:clamp(34px,11vw,52px)}}
+
+/* Découpe rouge inclinée vers / comme l'identité visuelle Autobiz. */
+.hero .heroArt{clip-path:polygon(15% 0,100% 0,100% 100%,0 100%)}
+@media (max-width:720px){.hero .heroArt{clip-path:none}}
+
+/* La pente commence nettement à gauche et reste derrière le slogan. */
+.hero{grid-template-columns:52% 48%}
+.hero .heroArt{clip-path:polygon(20% 0,100% 0,100% 100%,0 100%)}
+@media (max-width:720px){.hero{grid-template-columns:1fr}.hero .heroArt{clip-path:none}}
+
+/* Sept marques sur une ligne, dont CAM2. */
+.logoGrid,.footerLogos{grid-template-columns:repeat(7,minmax(0,1fr))}
+@media (max-width:720px){.logoGrid,.footerLogos{grid-template-columns:repeat(3,minmax(0,1fr))}}
+
+/* Première section monochrome : uniquement le rouge Autobiz. */
+.hero{display:block;min-height:584px;background:#e32634}
+.hero .heroArt{width:100%;min-height:584px;background:#e32634;clip-path:none}
+@media (max-width:720px){.hero{min-height:420px}.hero .heroArt{min-height:420px}}
+
+/* Deux traces additionnelles, parallèles aux traits existants. */
+.hero .heroArt:before{box-shadow:0 -150px 0 rgba(255,255,255,.42)}
+.hero .heroArt:after{box-shadow:0 150px 0 rgba(255,255,255,.42)}
+@media (max-width:720px){.hero .heroArt:before{box-shadow:0 -105px 0 rgba(255,255,255,.42)}.hero .heroArt:after{box-shadow:0 105px 0 rgba(255,255,255,.42)}}
+
+/* Groupe de traces également présent à droite. */
+.heroRightTraces{position:absolute;right:-180px;top:112px;width:520px;height:1px;background:rgba(255,255,255,.42);box-shadow:0 145px 0 rgba(255,255,255,.42),0 290px 0 rgba(255,255,255,.42);transform:rotate(-29deg);transform-origin:center;pointer-events:none}
+@media (max-width:720px){.heroRightTraces{right:-280px;top:78px;width:440px;box-shadow:0 105px 0 rgba(255,255,255,.42),0 210px 0 rgba(255,255,255,.42)}}
