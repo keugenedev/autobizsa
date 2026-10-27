@@ -50,7 +50,7 @@
 
 .addressesCards article:first-child {
   grid-column: span 2;
-  min-height: 300px;
+  min-height: 260px;
   padding: 42px;
   border-color: #101820;
   background: #101820;

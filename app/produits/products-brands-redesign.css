@@ -44,3 +44,41 @@
   .productsBrandsAside { max-width: 290px; margin-top: 30px; }
   .productsBrandsTitle h2 { font-size: 45px; }
 }
+
+/* Grille de marques uniforme : aucun espace mort ni cellule incomplète. */
+.productsLogoGrid {
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 56px;
+  background: transparent;
+}
+
+.productsLogoGrid article,
+.productsLogoGrid article:last-child {
+  grid-column: auto;
+  height: 132px;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, .2);
+  background: #fff;
+  transition: transform .25s ease, border-color .25s ease;
+}
+
+.productsLogoGrid article:hover {
+  border-color: #e32634;
+  transform: translateY(-5px);
+}
+
+.productsLogoGrid img {
+  max-height: 68px;
+}
+
+@media (max-width: 1080px) {
+  .productsLogoGrid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+
+@media (max-width: 720px) {
+  .productsLogoGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .productsLogoGrid article,
+  .productsLogoGrid article:last-child { height: 118px; padding: 18px; }
+  .productsLogoGrid img { max-height: 58px; }
+}

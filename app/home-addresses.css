@@ -1,0 +1,24 @@
+/* Cartes d'adresses : logos officiels sur fonds blancs. */
+.locations .locationGrid { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; background: transparent; }
+.locations .locationGrid article { display: flex; flex-direction: column; min-height: 185px; padding: 28px 24px; background: #fff; }
+.locations .homeLocationLogo { display: block; width: min(100%, 142px); height: 40px; object-fit: contain; object-position: left center; }
+.locations .locationGrid p { margin-top: 18px; color: #687175; font-size: 12px; line-height: 1.65; }
+.locations .homeLocationContact { display: flex; flex-direction: column; gap: 3px; margin-top: 11px; }
+.locations .homeLocationContact a { color: #e32634; font-size: 11px; font-weight: 400; line-height: 1.4; text-decoration: none; }
+
+/* Accueil : les logos de marques restent sans carte blanche derrière. */
+.brands .logoGrid > div { background: transparent; }
+
+@media (max-width: 960px) {
+  .locations .locationGrid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+@media (max-width: 720px) {
+  .locations .locationGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .locations .locationGrid article { min-height: 155px; padding: 22px 18px; }
+  .locations .homeLocationLogo { width: min(100%, 126px); height: 34px; }
+}
+
+@media (max-width: 420px) {
+  .locations .locationGrid { grid-template-columns: 1fr; }
+}
