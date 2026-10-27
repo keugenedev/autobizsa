@@ -1,6 +1,8 @@
 "use client";
 
-import { motion, useReducedMotion, type Variants } from "framer-motion";
+import { useEffect } from "react";
+import { motion, useAnimation, useReducedMotion, type Variants } from "framer-motion";
+import { usePathname } from "next/navigation";
 
 const containerVariants: Variants = {
   hidden: {},
@@ -24,6 +26,15 @@ const lineVariants: Variants = {
 
 export default function HeroStatement() {
   const reduceMotion = useReducedMotion();
+  const pathname = usePathname();
+  const controls = useAnimation();
+
+  useEffect(() => {
+    if (reduceMotion || pathname !== "/") return;
+    controls.set("hidden");
+    const frame = requestAnimationFrame(() => controls.start("visible"));
+    return () => cancelAnimationFrame(frame);
+  }, [controls, pathname, reduceMotion]);
 
   return (
     <>
@@ -31,7 +42,7 @@ export default function HeroStatement() {
         className="heroStatement"
         variants={containerVariants}
         initial={reduceMotion ? false : "hidden"}
-        animate="visible"
+        animate={reduceMotion ? "visible" : controls}
       >
         <motion.span className="heroLine" variants={lineVariants}>LA QUALITÉ</motion.span>
         <motion.strong className="heroLine" variants={lineVariants}>QUI VOUS</motion.strong>
