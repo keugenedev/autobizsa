@@ -1,0 +1,18 @@
+@media (max-width: 720px) {
+  .siteFooter .footerInner { padding: 42px 24px 26px; }
+  .siteFooter .footerTop { grid-template-columns: 1fr; gap: 0; padding-bottom: 26px; }
+  .siteFooter .footerTop > div:first-child { grid-column: auto; padding-bottom: 30px; }
+  .siteFooter .footerBrand { width: 154px; }
+  .siteFooter .footerTop p { max-width: 290px; margin-top: 13px; }
+  .siteFooter .footerColumn { gap: 9px; padding: 28px 0; border-top: 1px solid #e0e3e1; }
+  .siteFooter .footerColumn .footerLabel { margin-bottom: 8px; }
+  .siteFooter .contactItem { font-size: 14px; }
+  .siteFooter .socialLinks { margin-top: 14px; }
+  .siteFooter .footerAddress { padding-bottom: 4px; }
+  .siteFooter .addressList { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 13px 10px; }
+  .siteFooter .addressList li { font-size: 13px; }
+  .siteFooter .addressList span, .siteFooter .addressList b { font-size: 13px; }
+  .siteFooter .footerLogos { grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 5px; padding: 22px 0 16px; }
+  .siteFooter .footerLogos img { height: 30px; }
+  .siteFooter .footerBottom { gap: 8px; padding-top: 19px; border-top: 1px solid #e0e3e1; font-size: 11px; }
+}

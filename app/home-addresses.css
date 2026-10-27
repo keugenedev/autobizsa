@@ -16,7 +16,15 @@
 @media (max-width: 720px) {
   .locations .locationGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
   .locations .locationGrid article { min-height: 155px; padding: 22px 18px; }
+  .locations .locationGrid article:last-child { grid-column: 1 / -1; align-items: center; text-align: center; }
   .locations .homeLocationLogo { width: min(100%, 126px); height: 34px; }
+  .locations .locationGrid article:last-child .homeLocationLogo { width: min(100%, 154px); height: 42px; }
+  .locations .locationGrid article:last-child p { font-size: 13px; }
+  .locations .locationGrid article:last-child .homeLocationLogo { object-position: center; }
+  .locations .locationGrid article:last-child .homeLocationContact { align-items: center; }
+  .locations .locationGrid article:last-child .homeLocationContact a { font-size: 12px; }
+  .brands .logoGrid > div:last-child { grid-column: 2; }
+  .brands .logoGrid > div:last-child img { max-height: 82px; transform: scale(1.18); }
 }
 
 @media (max-width: 420px) {

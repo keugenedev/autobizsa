@@ -4,6 +4,7 @@ import "./hero-fix.css";
 import "./navbar-fix.css";
 import "./no-counts.css";
 import "./page-hero-title.css";
+import "./footer-mobile.css";
 
 export const metadata: Metadata = {
   title: "Autobiz SA | Produits automobiles",
