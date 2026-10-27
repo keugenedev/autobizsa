@@ -7,12 +7,13 @@ type AnimatedLogoProps = {
   alt: string;
   index: number;
   imageClassName?: string;
+  href?: string;
 };
 
-export default function AnimatedLogo({ src, alt, index, imageClassName }: AnimatedLogoProps) {
+export default function AnimatedLogo({ src, alt, index, imageClassName, href }: AnimatedLogoProps) {
   const reduceMotion = useReducedMotion();
 
-  return (
+  const logo = (
     <motion.div
       initial={reduceMotion ? false : { opacity: 0, y: 18, filter: "blur(9px)" }}
       whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
@@ -26,4 +27,6 @@ export default function AnimatedLogo({ src, alt, index, imageClassName }: Animat
       <img className={imageClassName} src={src} alt={alt} />
     </motion.div>
   );
+
+  return href ? <a href={href} aria-label={`Découvrir ${alt}`}>{logo}</a> : logo;
 }

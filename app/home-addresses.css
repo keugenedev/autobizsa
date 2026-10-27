@@ -7,7 +7,7 @@
 .locations .homeLocationContact a { color: #e32634; font-size: 11px; font-weight: 400; line-height: 1.4; text-decoration: none; }
 
 /* Accueil : les logos de marques restent sans carte blanche derrière. */
-.brands .logoGrid > div { background: transparent; }
+.brands .logoGrid > * { display: grid; place-items: center; min-height: 110px; padding: 18px; background: transparent; }
 .brands .logoGrid { grid-template-columns: repeat(5, minmax(0, 1fr)); }
 
 @media (max-width: 960px) {
@@ -24,8 +24,11 @@
   .locations .locationGrid article:last-child .homeLocationLogo { object-position: center; }
   .locations .locationGrid article:last-child .homeLocationContact { align-items: center; }
   .locations .locationGrid article:last-child .homeLocationContact a { font-size: 12px; }
-  .brands .logoGrid > div:last-child { grid-column: 2; }
-  .brands .logoGrid > div:last-child img { max-height: 82px; transform: scale(1.18); }
+  .brands .logoGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px 12px; margin-top: 34px; }
+  .brands .logoGrid > * { min-height: 92px; padding: 10px; }
+  .brands .logoGrid img { display: block; width: auto; max-width: 138px; max-height: 64px; }
+  .brands .logoGrid > *:last-child { grid-column: 1 / -1; }
+  .brands .logoGrid > *:last-child img { max-width: 158px; max-height: 72px; transform: none; }
 }
 
 @media (max-width: 420px) {
