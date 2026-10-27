@@ -10,7 +10,7 @@ import "./products-brands-redesign.css";
 
 export const metadata = { title: "Produits et marques | Autobiz SA", description: "Découvrez les produits et marques distribués par Autobiz SA." };
 
-const brands = [["/shell.png", "Shell", "https://www.instagram.com/shell_haiti/"], ["/art.png", "Automotive Art"], ["/toro.png", "Toro"], ["/titan.png", "Titan"], ["/alomoto.png", "Alomoto"]];
+const brands = [["/shell.png", "Shell", "https://www.shell.com/motorist/find-the-right-oil.html#iframe=L21vdG9yaXN0L2ZpbmQtdGhlLXJpZ2h0LW9pbC9famNyX2NvbnRlbnQvcm9vdC9tYWluL3NlY3Rpb24vd2ViX2NvbXBvbmVudC9saW5rcy9pdGVtMC5zdHJlYW0vMTc4OTA0OTU4OTU4Mi9jOTEwZDg3N2U0NjE0NWJjMTA3NTJhMDczZGJiNTNjOGIyMjQ5NjAzL2lmcmFtZS5odG1sIy9nYi9lbi1nYg%3D%3D"], ["/art.png", "Automotive Art"], ["/toro.png", "Toro"], ["/titan.png", "Titan"], ["/alomoto.png", "Alomoto"]];
 const categories = [["Lubrifiants", "Une sélection pensée pour protéger et faire durer vos moteurs."], ["Peinture auto", "Les solutions Automotive Art pour un rendu précis et durable."], ["Moto", "L’essentiel pour vos déplacements à deux roues, au quotidien."]];
 
 export default function ProductsPage() {
