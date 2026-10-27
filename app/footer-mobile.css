@@ -1,3 +1,8 @@
+/* Les cinq logos restants occupent la largeur du footer et sont centrés dans leur colonne. */
+.siteFooter .footerLogos { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+.siteFooter .footerLogos > div { display: grid; place-items: center; }
+.siteFooter .footerLogos img { display: block; width: auto; max-width: 100%; margin: 0 auto; }
+
 @media (max-width: 720px) {
   .siteFooter .footerInner { padding: 42px 24px 26px; }
   .siteFooter .footerTop { grid-template-columns: 1fr; gap: 0; padding-bottom: 26px; }
@@ -12,7 +17,7 @@
   .siteFooter .addressList { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 13px 10px; }
   .siteFooter .addressList li { font-size: 13px; }
   .siteFooter .addressList span, .siteFooter .addressList b { font-size: 13px; }
-  .siteFooter .footerLogos { grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 5px; padding: 22px 0 16px; }
+  .siteFooter .footerLogos { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 5px; padding: 22px 0 16px; }
   .siteFooter .footerLogos img { height: 30px; }
   .siteFooter .footerBottom { gap: 8px; padding-top: 19px; border-top: 1px solid #e0e3e1; font-size: 11px; }
 }

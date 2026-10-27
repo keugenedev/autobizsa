@@ -6,7 +6,6 @@
 .productGrid{grid-template-columns:repeat(3,minmax(0,1fr))}
 .productGrid article:last-child{border-right:0}
 .logoGrid img{filter:none}
-.logoGrid img.xteerImage{width:auto;height:auto;max-width:100%;max-height:78px;object-fit:contain;filter:none}
 
 @media (max-width:720px){
   .heroCopy{padding:70px 26px}
@@ -29,7 +28,6 @@
 .footerColumn p:not(.footerLabel){margin:0}
 .footerLogos{display:grid;grid-template-columns:repeat(6,1fr);gap:1px;padding:1px;background:#354047}
 .footerLogos img{width:100%;height:76px;object-fit:contain;padding:16px;background:#151f25;filter:none}
-.footerLogos img.footerXteer{object-fit:contain;padding:8px}
 .footerBottom{display:flex;justify-content:space-between;padding-top:22px;color:#839095;font-size:11px;letter-spacing:.3px}
 
 /* Palette originale Autobiz pour le footer. */
@@ -39,7 +37,6 @@
 .footerColumn a{color:var(--ink)}
 .footerLogos{gap:24px;padding:12px 0;background:transparent}
 .footerLogos img{height:48px;padding:0;background:transparent}
-.footerLogos img.footerXteer{padding:0}
 .footerBottom{color:#687175}
 .footerEmail{margin-top:4px;color:var(--red)!important}
 .socialLinks{display:flex;gap:8px;margin-top:14px}
@@ -117,7 +114,7 @@
 .hero .heroArt{clip-path:polygon(20% 0,100% 0,100% 100%,0 100%)}
 @media (max-width:720px){.hero{grid-template-columns:1fr}.hero .heroArt{clip-path:none}}
 
-/* Sept marques sur une ligne, dont CAM2. */
+/* Cinq marques sur une ligne. */
 .logoGrid,.footerLogos{grid-template-columns:repeat(7,minmax(0,1fr))}
 @media (max-width:720px){.logoGrid,.footerLogos{grid-template-columns:repeat(3,minmax(0,1fr))}}
 

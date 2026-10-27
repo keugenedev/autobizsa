@@ -8,6 +8,7 @@
 
 /* Accueil : les logos de marques restent sans carte blanche derrière. */
 .brands .logoGrid > div { background: transparent; }
+.brands .logoGrid { grid-template-columns: repeat(5, minmax(0, 1fr)); }
 
 @media (max-width: 960px) {
   .locations .locationGrid { grid-template-columns: repeat(3, minmax(0, 1fr)); }

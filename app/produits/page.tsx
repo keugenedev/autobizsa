@@ -10,7 +10,7 @@ import "./products-brands-redesign.css";
 
 export const metadata = { title: "Produits et marques | Autobiz SA", description: "Découvrez les produits et marques distribués par Autobiz SA." };
 
-const brands = [["/shell.png", "Shell"], ["/xteer.png", "XTeer"], ["/cam2.png", "CAM2"], ["/art.png", "Automotive Art"], ["/toro.png", "Toro"], ["/titan.png", "Titan"], ["/alomoto.png", "Alomoto"]];
+const brands = [["/shell.png", "Shell"], ["/art.png", "Automotive Art"], ["/toro.png", "Toro"], ["/titan.png", "Titan"], ["/alomoto.png", "Alomoto"]];
 const categories = [["Lubrifiants", "Une sélection pensée pour protéger et faire durer vos moteurs."], ["Peinture auto", "Les solutions Automotive Art pour un rendu précis et durable."], ["Moto", "L’essentiel pour vos déplacements à deux roues, au quotidien."]];
 
 export default function ProductsPage() {
