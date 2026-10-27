@@ -11,6 +11,7 @@
 .siteHeader .desktopNav { grid-column: 2; }
 .siteHeader nav a, .phoneTop { font-size: 14px; }
 .mobileMenuButton, .siteHeader .mobileNav { display: none; }
+.siteHeader nav a.isActive { color: var(--red); }
 
 /* Le hero conserve exactement la hauteur disponible sous la navigation. */
 .hero, .hero .heroArt { min-height: calc(100svh - 72px); }

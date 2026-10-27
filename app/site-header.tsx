@@ -2,9 +2,11 @@
 
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 const links = [
+  ["/", "Accueil"],
   ["/produits", "Produits"],
   ["/produits#marques", "Marques"],
   ["/adresses", "Nos adresses"],
@@ -13,16 +15,18 @@ const links = [
 
 export default function SiteHeader() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
   const closeMenu = () => setMenuOpen(false);
+  const isActive = (href: string) => href === pathname;
 
   return (
     <header className={`siteHeader${menuOpen ? " menuOpen" : ""}`}>
-      <Link href="/#accueil" aria-label="Autobiz SA, accueil" onClick={closeMenu}>
+      <a href="/" aria-label="Autobiz SA, accueil" onClick={closeMenu}>
         <img className="brandLogo" src="/autobiz.png" alt="Autobiz SA" />
-      </Link>
+      </a>
 
       <nav className="desktopNav" aria-label="Navigation principale">
-        {links.map(([href, label]) => <Link key={href} href={href}>{label}</Link>)}
+        {links.map(([href, label]) => <Link key={href} href={href} className={isActive(href) ? "isActive" : undefined} aria-current={isActive(href) ? "page" : undefined}>{label}</Link>)}
       </nav>
 
       <button
@@ -37,7 +41,7 @@ export default function SiteHeader() {
       </button>
 
       <nav id="mobile-navigation" className="mobileNav" aria-label="Navigation mobile">
-        {links.map(([href, label]) => <Link key={href} href={href} onClick={closeMenu}>{label}</Link>)}
+        {links.map(([href, label]) => <Link key={href} href={href} onClick={closeMenu} className={isActive(href) ? "isActive" : undefined} aria-current={isActive(href) ? "page" : undefined}>{label}</Link>)}
       </nav>
     </header>
   );

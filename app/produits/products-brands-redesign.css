@@ -1,0 +1,46 @@
+/* En-tête de marques : lecture directe, sans colonne laissée vide. */
+.productsBrandsHeading {
+  display: block;
+}
+
+.productsBrandsTitle > p {
+  margin: 0 0 18px;
+  color: #ff6974;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.productsBrandsTitle h2 {
+  max-width: 760px;
+  font-size: clamp(42px, 4.5vw, 64px);
+}
+
+.productsBrandsAside {
+  padding: 18px 0 2px;
+  border-top: 1px solid #445057;
+}
+
+.productsBrandsAside span {
+  display: block;
+  margin: 0;
+  color: #ff6974;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.productsBrandsAside p {
+  margin: 12px 0 0;
+  color: #aeb8bb;
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+@media (max-width: 720px) {
+  .productsBrandsHeading { display: block; }
+  .productsBrandsAside { max-width: 290px; margin-top: 30px; }
+  .productsBrandsTitle h2 { font-size: 45px; }
+}

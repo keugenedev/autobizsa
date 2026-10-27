@@ -1,0 +1,13 @@
+/* Le message reste à gauche et se positionne à mi-hauteur du hero. */
+.productsHeroInner {
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 0;
+  padding-bottom: 0;
+  text-align: left;
+  transform: translateY(138px);
+}
+
+@media (max-width: 720px) {
+  .productsHeroInner { transform: translateY(82px); }
+}
